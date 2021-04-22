@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">The Laytonmobile</string>
+
+    <string name="AB_SearchButton">Buscar</string>
+    <string name="AB_OffButton">Apagar</string>
+
+    <string name="Button_Lights">Luces</string>
+    <string name="Button_PlayPause">Play Pause</string>
+    <string name="Button_GoFront">Go Front</string>
+    <string name="Button_GoBack">Go Back</string>
+    <string name="Button_TurnLeft">Turn Left</string>
+    <string name="Button_TurnRigth">Turn Right</string>
+
+    <string name="txtVel">Velocidad</string>
+    <string name="txtMsgFromBT">Mensaje desde BT</string>
+
+    <string name="txtVinculatedDevices"> Dispositivos Vinculados</string>
+
+</resources>

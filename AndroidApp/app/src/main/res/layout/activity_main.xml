@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/ImgButton_GoBack"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:contentDescription="@string/Button_GoBack"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ImgButton_PlayPause"
+        app:srcCompat="@mipmap/ic_goback" />
+
+    <ImageButton
+        android:id="@+id/ImgButton_GoFront"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="16dp"
+        android:background="#FFFFFF"
+        android:contentDescription="@string/Button_GoFront"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/ImgButton_PlayPause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/ic_gostraight" />
+
+    <ImageButton
+        android:id="@+id/ImgButton_TurnLeft"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="16dp"
+        android:background="#FFFFFF"
+        android:contentDescription="@string/Button_TurnLeft"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/HorizontalLayout"
+        app:layout_constraintEnd_toStartOf="@+id/ImgButton_PlayPause"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@mipmap/ic_trunleft" />
+
+    <ImageButton
+        android:id="@+id/ImgButton_TurnRigth"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        android:background="#FFFFFF"
+        android:contentDescription="@string/Button_TurnRigth"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/HorizontalLayout"
+        app:layout_constraintStart_toEndOf="@+id/ImgButton_PlayPause"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@mipmap/ic_trunright" />
+
+    <ImageButton
+        android:id="@+id/ImgButton_PlayPause"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="#FFFFFF"
+        android:contentDescription="@string/Button_PlayPause"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/HorizontalLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@mipmap/ic_playpause" />
+
+    <LinearLayout
+        android:id="@+id/HorizontalLayout"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/Button_Lights"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:text="@string/Button_Lights" />
+
+        <LinearLayout
+            android:id="@+id/VerticalLayout"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtVel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="@string/txtVel"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="51dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtFromBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/txtMsgFromBT"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtMsgFromBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#33C97028"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
